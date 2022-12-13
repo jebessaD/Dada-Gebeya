@@ -8,7 +8,7 @@ import image1 from "./images/photo1.jpg"
 
 const About = () => {
   return (
-    <div className="">
+    <div >
       <div className="grid md:grid-cols-2 gap-5 mx-16 my-9">
         <div className="col-span-2 bg-white text-center p-6">
           <h1 className="text-5xl my-5">Who are we?</h1>
