@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+input[type=range]::-webkit-slider-thumb {
+width: 16px;
+height: 6px;
+background-color: rgb(13, 152, 17);
+border-radius: 3px;
+-webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-thumb{
+width: 16px;
+height: 6px;
+background-color: rgb(13, 152, 17);
+border-radius: 3px;
+}
+
+.h-100 {
+    height: 30rem
+}
+.h-120 {
+    height: 34rem
+}
+
+@tailwind utilities;
