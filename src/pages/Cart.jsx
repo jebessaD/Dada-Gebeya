@@ -74,8 +74,7 @@ const Cart = () => {
             <button
               className="px-3 rounded text-white bg-green-500"
               type="button"
-              onClick={() => setShowModal(true)}
-            >
+              onClick={() => setShowModal(true)}>
               Pay Now
             </button>
             {

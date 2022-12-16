@@ -16,7 +16,7 @@ const Contact = () => {
     <>
     <div className="grid md:grid-cols-6 sm:p-8">
         <div className={`${darkMode?"text-gray-100":"text-gray-700 bg-white"} md:col-span-6 text-center sm:m-4 py-10 px-2 my-4 mx-2 sm:p-10 `}>
-                <h2 className="text-3xl  ">Love to hear form you,</h2>
+                <h2 className="text-3xl  ">Love to hear from you,</h2>
                 <h1 className="text-5xl py-4 font-semibold ">GET <span className="text-green-500">IN </span> TOUCH</h1>
                 <p className={`${darkMode?"text-neutral-400":"text-gray-500 "} text-sm text-center pt-4 `}>If you have any suggestion, question or even you want to say Hello. Please fill out the form below and we will reply you shortly.</p>
         </div>
