@@ -1,27 +1,31 @@
 
 import React, { useEffect } from 'react';
-import Loading from "./LoadingSpinner";
-import Main from './Main';
-import Error from './Error';
-import { useGlobalContext } from "./context";
+import Loading from "./components/LoadingSpinner";
+import Main from './Router/router';
+import Error from './components/Error';
+import { useGlobalContext } from "./hooks/context";
 
 function App() {
-  const {loading,error, products,fetchProducts,setAmount,setTotal } = useGlobalContext();
+  const {state,loading,error, products,fetchProducts,setAmount,setTotal,colors} = useGlobalContext();
 
   useEffect(()=>{
     setAmount();
-  },[products])
-
-  useEffect(()=>{
     setTotal();
+    console.log("back");
   },[products])
 
   useEffect(()=>{
     fetchProducts();
   },[])
 
+
+  useEffect(()=>{
+    window.localStorage.setItem("ALL_CURRENT_DATA", JSON.stringify({...state}))
+  },[state])
+
+
   return(
-    <div className='bg-neutral-50  min-h-screen scroll-smooth font-sans'>
+    <div className={`${colors.color1}  min-h-screen scroll-smooth font-sans`}>
       {loading?<Loading />:error? <Error/>:<Main/>}
     </div>
   )

@@ -46,9 +46,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         products: state.products.map((product) => {
-          console.log("value increasedd");
+          // console.log("value increasedd");
           if (product.id === action.payload) {
-            console.log("product.added", product.id);
+            // console.log("product.added", product.id);
             return { ...product, amount: product.amount + 1 };
           }
 
@@ -70,7 +70,7 @@ const reducer = (state, action) => {
       return { ...state, total: tot };
 
       case "FETCH_PRODUCTS":
-        console.log(action.payload,"hello mr fetch");
+        // console.log(action.payload,"hello mr fetch");
         const newProducts=action.payload.map((product)=>{
             return {...product,amount:0}
         })
@@ -79,9 +79,13 @@ const reducer = (state, action) => {
       case "CHANGE_LOADING":
         return {...state,loading:false}
       
-        case "ERROR":
-            console.log("error occuredddd");
+      case "ERROR":
+            // console.log("error occuredddd");
             return {...state,error:true}
+
+      case "CHANGE_MODE":
+        // console.log("dark mode seted,",state.darkMode);
+        return {...state,darkMode:!state.darkMode}
       
   }
 };

@@ -1,14 +1,16 @@
 
-import "./App.css";
-import NavBar from "./NavBar";
-import Hero from "./Hero";
-import About from "./About"
+
+// import "../App.css"
+import "../styles/App.css"
+import NavBar from "../components/NavBar";
+import Hero from "../pages/Shop";
+import About from "../pages/About"
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import Cart from "./Cart";
-import NotFound from "./NotFound";
-import Contact from "./Contact";
-import Detail from "./Detail";
-import Home from "./Home"
+import Cart from "../pages/Cart";
+import NotFound from "../pages/NotFound";
+import Contact from "../pages/Contact";
+import Detail from "../pages/Detail";
+import Home from "../pages/Home"
 const Main = () => {
 
   return (

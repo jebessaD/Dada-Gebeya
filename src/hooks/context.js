@@ -3,19 +3,22 @@ import React, { useContext, useReducer } from "react";
 import reducer from "./reducer";
 
 const AppContext = React.createContext()
-const intialState={
+const data = JSON.parse(localStorage.getItem('ALL_CURRENT_DATA'));
+console.log(data,"prev data");
+const intialState= data || {
     loading:true,
     error:false,
     products:[],
     amount:0,
-    total:0
+    total:0,
+    darkMode:false,
 }
-
-
+console.log(data,"after data");
 
 export const AppProvider = ({children}) => {
     const [state,dipatch]=useReducer(reducer,intialState)
     const url="https://dummyjson.com/products"
+    const colors = state.darkMode?{color1:"bg-neutral-900 text-white ",color2:"bg-neutral-850 text-gray-300 ",color3:"bg-neutral-850 text-gray-400 "}:{color1:"bg-neutral-50 text-gray-900",color2:"bg-white text-gray-800",color3:"bg-neutral-100 text-gray-700"}
 
     const clearAll =()=>{
         dipatch({type:"CLEAR_ALL"})
@@ -48,22 +51,23 @@ export const AppProvider = ({children}) => {
         dipatch({type:"SUCCESS_DATA"})
     }
 
+    const changeDarkMode=()=>{
+        dipatch({type:"CHANGE_MODE"})
+    }
     const fetchProducts = async()=>{
-        // dipatch({type:"CHANGE_LOADING"})
         const res = await fetch(url);
-        console.log(res,"response");
+        // console.log(res,"response");
         if(res.ok===true || res.status ===200){
             const data = await res.json()
-            console.log(data.products,"new ferched data");
+            // console.log(data.products,"new ferched data");
             dipatch({type:"FETCH_PRODUCTS",payload:data.products})
             dipatch({type:"CHANGE_LOADING"})
-
         }else{
             dipatch({type:"ERROR"})
         }   
     }
     return ( 
-    < AppContext.Provider  value={{...state,fetchProducts,increaseAmount, successData,setTotal,clearAll,removeFromCart,removeProduct,addToCart,setAmount}}>
+    < AppContext.Provider  value={{state,...state,colors,changeDarkMode,fetchProducts,increaseAmount, successData,setTotal,clearAll,removeFromCart,removeProduct,addToCart,setAmount}}>
         {children}
     </AppContext.Provider>);
 }
