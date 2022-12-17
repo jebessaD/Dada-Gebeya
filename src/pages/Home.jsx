@@ -52,7 +52,7 @@ const Home = () => {
             </h1>
           </div>
         </div>
-        <div className="absolute sm:z-30 my-8 text-base top-3/4 left-1/2 -translate-x-1/2 ">
+        <div className="absolute z-30 my-8 text-base top-3/4 left-1/2 -translate-x-1/2 ">
           <Link
             to={"/shop"}
             className={`${
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
         {!darkMode ? (
           <img
-            className="w-full h-120 md:h-screen object-cover brightness-50 z-20"
+            className="w-full h-120 md:h-screen object-cover brightness-50 z-20 "
             src={heroImage}
             alt=""
           />
