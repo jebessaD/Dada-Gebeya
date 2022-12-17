@@ -13,7 +13,6 @@ const reducer = (state, action) => {
         }),
       };
     case "ADD_TO_CART":
-      // console.log("added to cart",state.products);
       return {
         ...state,
         products: state.products.map((product) => {
@@ -29,7 +28,6 @@ const reducer = (state, action) => {
       };
 
     case "REMOVE_FROM_CART":
-      // console.log("added to cart",state.products);
       return {
         ...state,
         products: state.products.map((product) => {
@@ -57,41 +55,38 @@ const reducer = (state, action) => {
       };
 
     case "SET_AMOUNT":
-      // console.log(state);
       const newAmount = state.products.reduce((acc, curr) => {
         return acc + curr.amount;
       }, 0);
-      // console.log(state,"the new one");
       return { ...state, amount: newAmount };
+
     case "SET_TOTAL":
       const tot = state.products.reduce((acc, curr) => {
         return acc + curr.amount * curr.price;
       }, 0);
       return { ...state, total: tot };
 
-      case "FETCH_PRODUCTS":
-        const data = JSON.parse(localStorage.getItem('ALL_CURRENT_DATA')) 
-        if (!data || !data.products.length){
-          const newProducts=action.payload.map((product)=>{
-            return {...product,amount:0}
-        })
-        return {...state,products:newProducts}
-        }
-        
-        
-      // }
-        
-      case "CHANGE_LOADING":
-        return {...state,loading:false}
-      
-      case "ERROR":
-            // console.log("error occuredddd");
-            return {...state,error:true}
+    case "FETCH_PRODUCTS":
+      const data = JSON.parse(localStorage.getItem("ALL_CURRENT_DATA"));
+      if (!data || !data.products.length) {
+        const newProducts = action.payload.map((product) => {
+          return { ...product, amount: 0 };
+        });
+        return { ...state, products: newProducts };
+      } else {
+        return { ...state };
+      }
 
-      case "CHANGE_MODE":
-        // console.log("dark mode seted,",state.darkMode);
-        return {...state,darkMode:!state.darkMode}
-      
+    case "CHANGE_LOADING":
+      return { ...state, loading: false };
+
+    case "ERROR":
+      return { ...state, error: true };
+
+    case "CHANGE_MODE":
+      return { ...state, darkMode: !state.darkMode };
+    default:
+      return { ...state };
   }
 };
 

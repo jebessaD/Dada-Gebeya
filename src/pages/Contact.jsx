@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { HiLocationMarker } from 'react-icons/hi';
 import { MdEmail ,MdAttachEmail,MdOutlineSubject} from 'react-icons/md';
 import { AiFillPhone } from 'react-icons/ai';
@@ -34,11 +33,11 @@ const Contact = () => {
                     <h1 className="text-lg mx-auto font-semibold ">SOCIAL PROFILES</h1>
                 </div>
                 <div className="flex  text-2xl mx-auto justify-center">
-                    <a href={"https://t.me/jeba_Deju" } target="_blank" className="mr-5 group  "><RiTelegramLine className="group-hover:-translate-y-1 group-hover:text-green-500 transition-all duration-[400ms] ease-out" /></a>
-                    <a href={"https://www.instagram.com/jeb_deju/"} target="_blank" className="mr-5 group"><RiInstagramLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
-                    <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221"}target="_blank" className="mr-5 group"><RiLinkedinBoxFill className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
-                    <a href={"https://www.facebook.com/jeb.deju/"} target="_blank" className="mr-5 group"><RiFacebookCircleLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
-                    <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221/"} target="_blank" className=" group"><RiTwitterLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
+                    <a href={"https://t.me/jeba_Deju" } target="_blank" rel="noreferrer" className="mr-5 group  "><RiTelegramLine className="group-hover:-translate-y-1 group-hover:text-green-500 transition-all duration-[400ms] ease-out" /></a>
+                    <a href={"https://www.instagram.com/jeb_deju/"} target="_blank" rel="noreferrer" className="mr-5 group"><RiInstagramLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
+                    <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221"}target="_blank" rel="noreferrer" className="mr-5 group"><RiLinkedinBoxFill className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
+                    <a href={"https://www.facebook.com/jeb.deju/"} target="_blank" rel="noreferrer" className="mr-5 group"><RiFacebookCircleLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
+                    <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221/"} target="_blank" rel="noreferrer" className=" group"><RiTwitterLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-green-500" /></a>
 
                 </div>
             </div>

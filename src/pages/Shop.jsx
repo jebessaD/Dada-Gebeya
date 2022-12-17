@@ -1,9 +1,9 @@
-import React, { useState,useRef } from "react";
+import React, { useState } from "react";
 import { useGlobalContext } from "../hooks/context";
 import { Product } from "../components/CardComponent";
 
 const Shop = () => {
-  const { products, amount, total,colors,darkMode } = useGlobalContext();
+  const { products, colors,darkMode } = useGlobalContext();
   const [filterWord, setFilterWord] = useState("ALL");
   const [minPrice,setMinPrice]=useState(0)
   const [maxPrice,setMaxPrice]=useState(5000)

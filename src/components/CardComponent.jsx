@@ -1,7 +1,7 @@
 import { SiShopify } from 'react-icons/si';
 import logo1 from  "../images/logo.png"
 import { useGlobalContext } from "../hooks/context"
-import { MdAddShoppingCart,MdDeleteSweep,MdOutlineDeleteOutline } from "react-icons/md";
+import { MdAddShoppingCart,MdDeleteSweep } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 
@@ -9,7 +9,6 @@ import Rating from "../components/Rating";
 const AboutCard = ({eachData}) => {
     const {colors,darkMode}=useGlobalContext()
     return ( 
-    <>
     <div className={`${colors.color2} col-span-1  rounded-md m-2 mx-3 py-3 md:py-5 md:px-6 flex items-center`}>
         <img className="basis-1/4 w-1 rounded-t-full px-5" src={eachData.image} alt={eachData.title}/>
         <div className={`${darkMode?"text-gray-350":"text-gray-900"} basis-3/4 `}>
@@ -17,7 +16,7 @@ const AboutCard = ({eachData}) => {
         <p>{eachData.description}</p>
         </div>
     </div>
-    </> );
+   );
 }
 
 const HomeCard = ({eachData}) => {
@@ -52,9 +51,7 @@ const Product = ({ product }) => {
                 <h4 className="text-gray-400 text-sm ">Added to the cart</h4> 
                 <MdDeleteSweep className=" text-lg text-red-500" onClick={()=>removeProduct(product.id)} />
               </div>
-            ) : (
-              <h1></h1>
-            )}
+            ) : <></>}
             <MdAddShoppingCart
               className=" flex justify-center text-2xl text-blue-400"
               onClick={() => addToCart(product.id)}

@@ -10,11 +10,11 @@ const Footer = () => {
 <div className={`${darkMode?"bg-neutral-950":"bg-gray-800"}  pt-10 mt-10 flex flex-col justify-center`}>
     <div className="mx-auto flex text-white text-xl bg-green-500 rounded-full p-1">
        
-        <a href={"https://t.me/jeb_Deju" } target="_blank" className="mr-5 group  "><RiTelegramLine className="group-hover:-translate-y-1 group-hover:text-gray-100 transition-all duration-[400ms] ease-out" /></a>
-        <a href={"https://www.instagram.com/jeba_deju/"} target="_blank" className="mr-5 group"><RiInstagramLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
-        <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221"} target="_blank" className="mr-5 group"><RiLinkedinBoxFill className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
-        <a href={"https://www.facebook.com/jeb.deju/"} target="_blank" className="mr-5 group"><RiFacebookCircleLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
-        <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221/"}  target="_blank" className=" group"><RiTwitterLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
+        <a href={"https://t.me/jeb_Deju" } target="_blank" rel="noreferrer" className="mr-5 group  "><RiTelegramLine className="group-hover:-translate-y-1 group-hover:text-gray-100 transition-all duration-[400ms] ease-out" /></a>
+        <a href={"https://www.instagram.com/jeba_deju/"} target="_blank" rel="noreferrer" className="mr-5 group"><RiInstagramLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
+        <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221"} target="_blank" rel="noreferrer" className="mr-5 group"><RiLinkedinBoxFill className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
+        <a href={"https://www.facebook.com/jeb.deju/"} target="_blank" rel="noreferrer" className="mr-5 group"><RiFacebookCircleLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
+        <a href={"https://www.linkedin.com/in/jebessa-dejene-74a674221/"}  target="_blank" rel="noreferrer" className=" group"><RiTwitterLine className="transition-all duration-[400ms] ease-out group-hover:-translate-y-1  group-hover:text-gray-100" /></a>
 
     </div>
     <div className="mx-auto flex justify-center text-xs sm:space-x-3 space-x-1 text-gray-200 my-5 items-center font-semibold uppercase">

@@ -35,7 +35,7 @@ const homeCardData = [
 ];
 
 const Home = () => {
-  const { colors, darkMode } = useGlobalContext();
+  const { darkMode } = useGlobalContext();
   return (
     <>
       <div className="relative mb-10">

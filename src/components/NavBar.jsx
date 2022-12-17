@@ -6,7 +6,7 @@ import { useGlobalContext } from "../hooks/context";
 import logo from "../images/logo.png";
 import { useEffect, useState } from "react";
 const NavBar = () => {
-  const { amount,changeDarkMode,darkMode,colors } = useGlobalContext();
+  const { amount,changeDarkMode,darkMode } = useGlobalContext();
   const [menu,setMenu]= useState(false)
 
   useEffect(()=>{
