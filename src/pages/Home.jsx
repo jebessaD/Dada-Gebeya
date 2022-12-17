@@ -48,7 +48,7 @@ const Home = () => {
             </h1>
             <h1 className=" text-2xl font-semibold self-center pb-4 text-center md:px-14">
               "A brand is no longer what we tell the consumer it is—it's what
-              consumers tell each other it is." — Scott Cooke
+              consumers tell each other it is." —Scott Cooke
             </h1>
           </div>
         </div>
