@@ -44,7 +44,7 @@ const Home = () => {
         >
           <div className="grid place-items-center ">
             <h1 className="text-green-900 text-4xl sm:text-6xl py-6 font-black ">
-              DADA GEBEYAA
+              DADA GEBEYA
             </h1>
             <h1 className=" text-2xl font-semibold self-center pb-4 text-center md:px-14">
               "A brand is no longer what we tell the consumer it is—it's what
