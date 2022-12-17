@@ -51,7 +51,7 @@ const Product = ({ product }) => {
                 <h4 className="text-gray-400 text-sm ">Added to the cart</h4> 
                 <MdDeleteSweep className=" text-lg text-red-500" onClick={()=>removeProduct(product.id)} />
               </div>
-            ) : <></>}
+            ) : <div></div>}
             <MdAddShoppingCart
               className=" flex justify-center text-2xl text-blue-400"
               onClick={() => addToCart(product.id)}
