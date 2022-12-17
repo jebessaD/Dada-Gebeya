@@ -24,9 +24,9 @@ const AddedProducts = ({product}) => {
         </h2>
         <div className='baisi-1/12'>$ {product.price}</div>
         <div className='basis-3/12 justify-center flex items-center'>
-            <div onClick={()=>removeFromCart(product.id)} className={`${darkMode?"hover:bg-neutral-800":"hover:bg-gray-100"} p-2 border `}><HiOutlineMinusSm/></div>
+            <div onClick={()=>removeFromCart(product.id)} className={`${darkMode?"hover:bg-neutral-800 border-neutral-700":"hover:bg-gray-100"} p-2 border `}><HiOutlineMinusSm/></div>
             <div className='p-2 mx-2'>{product.amount}</div>
-            <div onClick={()=>increaseAmount(product.id)} className={`${darkMode?"hover:bg-neutral-800":"hover:bg-gray-100"} p-2 border `}><IoIosAdd/></div>
+            <div onClick={()=>increaseAmount(product.id)} className={`${darkMode?"hover:bg-neutral-800 border-neutral-700":"hover:bg-gray-100"} p-2 border `}><IoIosAdd/></div>
         </div>
         <div className='basis-1/12'>
             <MdClear onClick={()=>removeProduct(product.id)} className="hover:text-red-500"/>

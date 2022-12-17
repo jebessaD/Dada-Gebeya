@@ -39,7 +39,6 @@ const handleFilter=({category})=>{
                 Filter by category
               </h2>
               <div className="h-0.5 my-1 bg-green-500 w-10"></div>
-
                 <div className="">
                   {
                     allCategory.map((category,index)=>{
