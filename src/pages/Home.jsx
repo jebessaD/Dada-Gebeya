@@ -84,8 +84,8 @@ const Home = () => {
       </div>
 
       <div className=" grid lg:grid-cols-4 sm:grid-cols-2 px-2 sm:px-10">
-        {homeCardData.map((eachData) => {
-          return <HomeCard eachData={eachData} />;
+        {homeCardData.map((eachData,index) => {
+          return <HomeCard eachData={eachData} key={index} />;
         })}
       </div>
 

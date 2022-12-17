@@ -29,7 +29,6 @@ const Cart = () => {
                 
           </Link>
 
-            {/* <Modal/> */}
       { amount?
       <div className={`${darkMode?"bg-neutral-900 border-neutral-700":"bg-neutral-50"}  ml-3  flex border-b  md:sticky md:top-0 text-start py-3 md:py-6 my-4 justify-between md:mx-36`}>
         <div className=' hidden md:block basis-1/12 font-semibold'>

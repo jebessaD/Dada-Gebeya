@@ -70,11 +70,16 @@ const reducer = (state, action) => {
       return { ...state, total: tot };
 
       case "FETCH_PRODUCTS":
-        // console.log(action.payload,"hello mr fetch");
-        const newProducts=action.payload.map((product)=>{
+        const data = JSON.parse(localStorage.getItem('ALL_CURRENT_DATA')) 
+        if (!data || !data.products.length){
+          const newProducts=action.payload.map((product)=>{
             return {...product,amount:0}
         })
         return {...state,products:newProducts}
+        }
+        
+        
+      // }
         
       case "CHANGE_LOADING":
         return {...state,loading:false}

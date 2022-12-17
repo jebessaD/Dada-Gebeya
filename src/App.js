@@ -11,11 +11,12 @@ function App() {
   useEffect(()=>{
     setAmount();
     setTotal();
-    console.log("back");
   },[products])
 
   useEffect(()=>{
+    console.log("call fetch the data");
     fetchProducts();
+
   },[])
 
 

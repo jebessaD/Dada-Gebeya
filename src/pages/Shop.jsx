@@ -110,10 +110,8 @@ const handleFilter=({category})=>{
         </div>
         <div className="">
           <div className="sm:p-5 grid sm:grid-cols-2 my-2 md:grid-cols-3 py-10">
-           { products.map((product) => {
-              console.log(search,"aaaaaaa");
+           {products.map((product) => {
               if(search){
-                console.log("it is ture");
                 return product.title.toLowerCase().includes(search.toLowerCase())?
                 <Product key={product.id} product={product} />:<></>
               }

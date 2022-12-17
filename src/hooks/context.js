@@ -4,7 +4,6 @@ import reducer from "./reducer";
 
 const AppContext = React.createContext()
 const data = JSON.parse(localStorage.getItem('ALL_CURRENT_DATA'));
-console.log(data,"prev data");
 const intialState= data || {
     loading:true,
     error:false,
@@ -13,7 +12,7 @@ const intialState= data || {
     total:0,
     darkMode:false,
 }
-console.log(data,"after data");
+console.log(intialState,"after data");
 
 export const AppProvider = ({children}) => {
     const [state,dipatch]=useReducer(reducer,intialState)
