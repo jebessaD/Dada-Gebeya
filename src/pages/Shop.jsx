@@ -22,13 +22,13 @@ const handleFilter=({category})=>{
   return (
     <div className=" lg:relative lg:flex">
       <div className=" lg:basis-1/5">
-        <div className={`${colors.color2}  mx-0 pl-5 flex lg:flex-col flex-wrap space-x-5 lg:space-x-0 lg:flex-nowrap lg:items-start lg:sticky md:top-0  p-2  lg:min-h-screen `}>
+        <div className={`${colors.color2}  mx-0 pl-5 flex-col sm:flex md:flex-rowgig lg:flex-col sm:flex-wrap space-x-5 lg:space-x-0 lg:flex-nowrap lg:items-start lg:sticky md:top-0  p-2  lg:min-h-screen `}>
           <div className="lg:mb-3 order-1 md:order-2 lg:order-1 mx-4 lg:mx-0">
               <h1 className=" pt-2 font-bold">Search</h1>
               <div className="h-0.5 my-1 bg-green-500 w-10"></div>
               <form className="flex space-x-1">
                 <input
-                  className={ `${darkMode?" bg-neutral-850 border-neutral-700 hover:bg-neutral-800 placeholder:text-neutral-600 focus:bg-neutral-900":" hover:bg-slate-50 focus:bg-neutral-100"} border w-full p-2 px-3 rounded-lg my-2 outline-none`}
+                  className={ `${darkMode?" bg-neutral-850 border-neutral-700 hover:bg-neutral-800 placeholder:text-neutral-600 focus:bg-neutral-900":" hover:bg-slate-50 focus:bg-neutral-100"} border w-full p-2 sm:px-3 rounded-lg my-2 outline-none`}
                   type="text"
                   onChange={(e)=>setSearch(e.target.value)}
                   placeholder="Search here"/>

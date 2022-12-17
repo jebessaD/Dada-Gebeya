@@ -9,15 +9,18 @@ const NavBar = () => {
   const { amount,changeDarkMode,darkMode } = useGlobalContext();
   const [menu,setMenu]= useState(false)
 
+  const removeMenu=(()=>{
+    setMenu(false)
+  })
   useEffect(()=>{
     setMenu(false)
   },[])
   
   return (
     <div className="relative ">
-    <div className={`${darkMode?"bg-neutral-950 text-gray-50":"bg-neutral-50 text-gray-900"} fixed w-full  flex justify-between md:px-16 p-3 sm:py-5 items-center shadow-sm sm:w-auto relative z-20`}>
+    <div className={`${darkMode?"bg-neutral-950 text-gray-50":"bg-neutral-50 text-gray-900"} w-full  flex justify-between md:px-16 p-3 sm:py-5 items-center shadow-sm sm:w-auto relative z-40`}>
       
-      <Link to={"/"}>
+      <Link onClick={removeMenu} to={"/"}>
         <img className="sm:h-8 h-6" src={logo} alt="Dada Gebeya logo" />
       </Link>
 
@@ -74,29 +77,34 @@ const NavBar = () => {
       </div>
       
     </div>
-    <div className={`${darkMode?"bg-neutral-950 text-gray-50":"bg-neutral-50 border-b text-gray-900"}  ${menu?"translate-y-0 ":"-translate-y-56"} z-10 absolute flex flex-col sm:hidden duration-500 ease-out transition-all `}>
+    <div className={`${darkMode?"bg-neutral-950 text-gray-50":"bg-neutral-50 border-b text-gray-900"}  ${menu?"translate-y-0 ":"-translate-y-56"} z-30 absolute flex flex-col sm:hidden duration-500 ease-out transition-all `}>
         <div className=" w-screen text-center p-5 flex flex-col space-y-2">
           <NavLink
+              onClick={removeMenu}
               className={({ isActive }) =>
                 isActive ? "text-green-500" : ""}
               to={"/"}>Home</NavLink>
 
             <NavLink
+              onClick={removeMenu}
               className={({ isActive }) =>
               isActive ? "text-green-500" : ""}
               to={"/shop"}>Shop</NavLink>
 
             <NavLink
+              onClick={removeMenu}
               className={({ isActive }) =>
               isActive ? "text-green-500" : ""}
               to={"/about"}>About</NavLink>
 
             <NavLink
+              onClick={removeMenu}
               className={({ isActive }) =>
               isActive ? "text-green-500" : ""}
               to={"/contact"}>Contact</NavLink>
 
             <NavLink
+              onClick={removeMenu}
               className={({ isActive }) =>
               isActive ? "text-green-500" : ""}
               to={"/cart"}>
@@ -108,14 +116,6 @@ const NavBar = () => {
                 </div>
                 
                 </NavLink>
-            {/* <NavLink className={({ isActive }) =>
-              isActive ? "relative  text-green-500" : "relative flex "} to={"/cart"} >
-              mycart
-              <BsFillCartFill className=" text-xl mx-auto" />
-              <p className="absolute -right-3 -top-3 bg-green-400 text-black flex rounded-full w-4 text-xs mx-auto font-bold justify-center">
-                {amount>=1?amount:""}
-              </p>
-            </NavLink> */}
         </div>
 
       </div>
