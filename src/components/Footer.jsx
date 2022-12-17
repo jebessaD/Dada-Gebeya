@@ -18,11 +18,11 @@ const Footer = () => {
 
     </div>
     <div className="mx-auto flex justify-center text-xs sm:space-x-3 space-x-1 text-gray-200 my-5 items-center font-semibold uppercase">
-        <Link to={"/"}>HOME<span className="sm:ml-3 ml-1">|</span></Link>
-        <Link to={"/shop"}>SHOP<span className="sm:ml-3 ml-1">|</span></Link>
-        <Link to={"/about"}>ABOUT<span className="sm:ml-3 ml-1">|</span></Link>
-        <Link to={"/contact"}>CONTACT<span className="sm:ml-3 ml-1">|</span></Link>
-        <Link to={"/cart"}>CART</Link>
+        <Link className="hover:text-neutral-400" to={"/"}>HOME<span className="sm:ml-3 ml-1 ">|</span></Link>
+        <Link className="hover:text-neutral-400" to={"/shop"}>SHOP<span className="sm:ml-3 ml-1 ">|</span></Link>
+        <Link className="hover:text-neutral-400" to={"/about"}>ABOUT<span className="sm:ml-3 ml-1 ">|</span></Link>
+        <Link className="hover:text-neutral-400" to={"/contact"}>CONTACT<span className="sm:ml-3 ml-1 ">|</span></Link>
+        <Link className="hover:text-neutral-400" to={"/cart"}>CART</Link>
     </div>
     <div className={` ${darkMode?"bg-neutral-850":" bg-gray-700"} h-px  mx-32`}></div>
     <div className="mx-auto text-white font-bold mt-3 flex items-center space-x-2">
