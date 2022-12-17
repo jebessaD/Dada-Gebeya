@@ -74,9 +74,9 @@ const Detail = () => {
         </div>
         <div className={` ${darkMode?"bg-neutral-800":"bg-gray-300"}  h-px w-11/12 my-5 mx-auto`}></div>
 
-        <div className={` ${darkMode?"text-gray-300":"text-gray-700"} flex flex-col sm:flex-row justify-center items-center`}> 
-            <span className="font-bold px-3">Rating | </span> <Rating rating={newProduct.rating} />
-            <span className="font-bold px-3">Price |</span> <p className="text-sm ">${newProduct.price}</p>
+        <div className={` ${darkMode?"text-gray-300":"text-gray-700"} flex flex-col space-x-6 space-y-2 sm:space-y-0 sm:flex-row justify-center items-center`}> 
+            <p className="font-bold flex border-b border-green-500 py-3 sm:border-0">Rating <span className="px-2">|</span> <Rating rating={newProduct.rating} /></p>
+            <p className="font-bold flex ">Price  <span className="px-2">|</span> <p className="text-sm ">${newProduct.price}</p></p>
         </div>
 
         <div className={` ${darkMode?"bg-neutral-800":"bg-gray-300"}  h-px w-11/12 my-5 mx-auto`}></div>
